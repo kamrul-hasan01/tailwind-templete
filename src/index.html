@@ -1,5 +1,56 @@
 @@include('./components/header.html')
 
-<div class="text-8xl">asedrg</div>
+<section class="h-[100vh] flex justify-center items-center">
+  <div
+    class="w-full md:w-5/12 mx-auto mt-10 md:border-2 rounded-lg text-center feedbackWrap"
+  >
+    <h1 class="text-center py-5 text-2xl md:text-3xl font-medium text-gray-800">
+      How nice was my reply
+    </h1>
+    <p id="notification" style="display: none"></p>
+    <div class="flex justify-evenly mb-5 w-6/12 mx-auto">
+      <img
+        src="https://cdn.discordapp.com/attachments/948144867131924551/987584991758286878/1.png"
+        alt=""
+        class="emoji-green border-[1px] w-[50px] md:w-auto p-[10px] md:p-[40px] m-2 md:m-5 hover:border-green-500 duration-300 cursor-pointer rounded-lg imoji"
+        title="Satisfied"
+      />
+      <img
+        src="https://cdn.discordapp.com/attachments/948144867131924551/987584992001531974/2.png"
+        alt=""
+        title="Normal"
+        class="emoji-yellow border-[1px] w-[50px] md:w-auto p-[10px] md:p-[40px] m-2 md:m-5 hover:border-yellow-500 duration-300 cursor-pointer rounded-lg imoji"
+      />
+      <img
+        src="https://cdn.discordapp.com/attachments/948144867131924551/987584992303534120/3.png"
+        alt=""
+        class="emoji-red border-[1px] w-[50px] md:w-auto p-[10px] md:p-[40px] m-2 md:m-5 hover:border-red-500 duration-300 cursor-pointer rounded-lg imoji"
+        title="Unsatisfied"
+      />
+    </div>
+    <div class="w-8/12 md:w-6/12 mx-auto mb-7">
+      <input
+        list="countryList"
+        id="country_field"
+        placeholder="Type your country name"
+        class="border-[2px] rounded pl-5 block w-full focus:outline-green-500 py-2"
+      />
+      <datalist id="countryList">
+        <!-- <option value="Chrome"></option>
+        <option value="Firefox"></option>
+        <option value="Internet Explorer"></option>
+        <option value="Opera"></option>
+        <option value="Safari"></option>
+        <option value="Microsoft Edge"></option> -->
+      </datalist>
+    </div>
+    <button
+      class="py-3 bg-green-500 px-10 rounded-md text-white font-bold active:scale-95 mb-10 hover:bg-green-600 duration-300"
+      onclick="handleSubmit()"
+    >
+      Submit
+    </button>
+  </div>
+</section>
 
 @@include('./components/footer.html')

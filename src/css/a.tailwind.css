@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .emoji-green.emojiActive {
+    @apply border-green-500;
+  }
+  .emoji-yellow.emojiActive {
+    @apply border-yellow-500;
+  }
+  .emoji-red.emojiActive {
+    @apply border-red-500;
+  }
+}
