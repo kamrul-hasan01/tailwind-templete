@@ -262,6 +262,9 @@ let thankScreen = `<div class="thankYou text-center">
 </h1>
 </div>`;
 let reaction;
+const handleRating = (rating) => {
+  reaction = rating;
+};
 document.querySelector("#country_field").addEventListener("input", (e) => {
   const inputField = e.target.value;
   const countryOtion = document.getElementById("countryList");
@@ -276,17 +279,6 @@ document.querySelector("#country_field").addEventListener("input", (e) => {
   });
 });
 
-let emojis = document.querySelectorAll(".imoji");
-emojis.forEach((item) => {
-  item.addEventListener("click", (e) => {
-    document.querySelector(".emojiActive")
-      ? document.querySelector(".emojiActive").classList.remove("emojiActive")
-      : "";
-
-    e.target.classList.add("emojiActive");
-    reaction = e.target.getAttribute("title");
-  });
-});
 const handleSubmit = async () => {
   const countryName = document.getElementById("country_field").value;
   const notification = document.getElementById("notification");
@@ -295,7 +287,9 @@ const handleSubmit = async () => {
   if (checkingCountry && reaction) {
     let dateTime = new Date();
     dateTime = dateTime.toLocaleString();
-    const url = `https://hooks.zapier.com/hooks/catch/1805654/bajp653?reaction=${reaction}&country="${countryName}&&dateTime=${dateTime}`;
+    console.log(reaction, countryName, dateTime);
+    const url = `https://webhook.site/f6d9d61c-68d5-4607-8786-84755cb3c36b?reaction=${reaction}&country="${countryName}&&dateTime=${dateTime}`;
+    // const url = `https://hooks.zapier.com/hooks/catch/1805654/bajp653?reaction=${reaction}&country="${countryName}&&dateTime=${dateTime}`;
 
     fetch(url)
       .then((res) => res.json())

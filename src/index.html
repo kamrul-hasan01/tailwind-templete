@@ -5,22 +5,22 @@
     class="w-full md:w-5/12 mx-auto mt-10 md:border-2 rounded-lg text-center feedbackWrap"
   >
     <h1 class="text-center py-5 text-2xl md:text-3xl font-medium text-gray-800">
-      How nice was my reply
+      Your feedback will inspire us more to serve.
     </h1>
     <p id="notification" style="display: none"></p>
     <div class="emoji-container">
       <div class="feedback">
         <div class="rating">
           <input type="radio" name="rating" id="rating-5" />
-          <label for="rating-5"></label>
+          <label for="rating-5" onclick="handleRating('Excellent')"></label>
           <input type="radio" name="rating" id="rating-4" />
-          <label for="rating-4"></label>
+          <label for="rating-4" onclick="handleRating('Good')"></label>
           <input type="radio" name="rating" id="rating-3" />
-          <label for="rating-3"></label>
+          <label for="rating-3" onclick="handleRating('Satisfactory')"></label>
           <input type="radio" name="rating" id="rating-2" />
-          <label for="rating-2"></label>
+          <label for="rating-2" onclick="handleRating('Not good')"></label>
           <input type="radio" name="rating" id="rating-1" />
-          <label for="rating-1"></label>
+          <label for="rating-1" onclick="handleRating('Annoying')"></label>
           <div class="emoji-wrapper">
             <div class="emoji">
               <svg
@@ -322,26 +322,7 @@
         </div>
       </div>
     </div>
-    <!-- <div class="flex justify-evenly mb-5 w-6/12 mx-auto">
-      <img
-        src="https://cdn.discordapp.com/attachments/948144867131924551/987584991758286878/1.png"
-        alt=""
-        class="emoji-green border-[1px] w-[50px] md:w-auto p-[10px] md:p-[40px] m-2 md:m-5 hover:border-green-500 duration-300 cursor-pointer rounded-lg imoji"
-        title="Satisfied"
-      />
-      <img
-        src="https://cdn.discordapp.com/attachments/948144867131924551/987584992001531974/2.png"
-        alt=""
-        title="Normal"
-        class="emoji-yellow border-[1px] w-[50px] md:w-auto p-[10px] md:p-[40px] m-2 md:m-5 hover:border-yellow-500 duration-300 cursor-pointer rounded-lg imoji"
-      />
-      <img
-        src="https://cdn.discordapp.com/attachments/948144867131924551/987584992303534120/3.png"
-        alt=""
-        class="emoji-red border-[1px] w-[50px] md:w-auto p-[10px] md:p-[40px] m-2 md:m-5 hover:border-red-500 duration-300 cursor-pointer rounded-lg imoji"
-        title="Unsatisfied"
-      />
-    </div> -->
+
     <div class="w-8/12 md:w-6/12 mx-auto mb-7">
       <input
         list="countryList"
@@ -349,17 +330,10 @@
         placeholder="Type your country name"
         class="border-[2px] rounded pl-5 block w-full focus:outline-green-500 py-2"
       />
-      <datalist id="countryList">
-        <!-- <option value="Chrome"></option>
-        <option value="Firefox"></option>
-        <option value="Internet Explorer"></option>
-        <option value="Opera"></option>
-        <option value="Safari"></option>
-        <option value="Microsoft Edge"></option> -->
-      </datalist>
+      <datalist id="countryList"> </datalist>
     </div>
     <button
-      class="py-3 bg-green-500 px-10 rounded-md text-white font-bold active:scale-95 mb-10 hover:bg-green-600 duration-300"
+      class="py-3 bg-[#0066D3] px-10 rounded-md text-white font-bold active:scale-95 mb-10 hover:bg-green-600 duration-300"
       onclick="handleSubmit()"
     >
       Submit
